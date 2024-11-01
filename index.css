@@ -98,15 +98,17 @@ textarea:not([rows]) {
     --button-color: #fff;
     --button-text: #3D3D3D;
 
+    --button-border: #B295FF;
+
     --light-body-color: #fff;
     --light-mode-cnt-color: #F4F4F4;
-    --light-mode-box-color: #fff;
+    --light-mode-conversion-color: #fff;
     --light-mode-h3-color: #5A537B;
     --light-mode-p-color: #353535;
 
     --dark-body-color: #1C1C1C;
     --dark-mode-cnt-color: #1F2937;
-    --dark-mode-box-color: #273549;
+    --dark-mode-conversion-color: #273549;
     --dark-mode-h3-color: #CCC1FF;
     --dark-mode-p-color: #FFFFFF;
 
@@ -152,8 +154,63 @@ body {
 
 .upper-container {
     background-color: var(--primary-color);
+    padding: 2rem;
 }
 
+.container .upper-container .header.medium {
+    color: var(--h2-color);
+    font-weight: var(--h2-font-weight);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    text-align: center;
+    margin: 0;
+}
+
+#input {
+    display: block;
+    background-color: transparent;
+    border: 2px solid var(--button-border);
+    border-radius: 5px;
+    font-size: var(--input-font-size);
+    font-weight: var(--input-font-weight);
+    line-height: var(--input-line-height);
+    margin: 1.5rem auto;
+    text-align: center;
+    color: var(--button-color);
+}
+
+#convert-btn {
+    display: block;
+    background-color: var(--button-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    line-height: var(--button-line-height);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1.75rem;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.container .conversion-box {
+    background-color: var(--light-mode-conversion-color);
+}
+
+.header.small {
+    color: var(--light-mode-h3-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+    line-height:  var(--h3-line-height);
+    text-align: center;
+}
+
+.converted {
+    color: var(--light-mode-p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--p-font-weight);
+    line-height:  var(--p-line-height);
+    text-align: center;
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -163,5 +220,17 @@ body {
 
     .container {
         background-color: var(--dark-mode-cnt-color);
+    }
+
+    .container .conversion-box {
+        background-color: var(--dark-mode-conversion-color);
+    }
+
+    .header.small {
+        color: var(--dark-mode-h3-color);
+    }
+
+    .converted {
+        color: var(--dark-mode-p-color);
     }
 }
