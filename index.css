@@ -84,11 +84,11 @@ textarea:not([rows]) {
     outline: 1px solid red;
 }
 
-*:nth-child(2) {
+*:nth-child(even) {
     outline: 1px solid blue;
 }
 
-/* Global Style */
+/* Style Guide */
 :root {
     /* Color Palette */
     --primary-color: #6943FF;
@@ -99,13 +99,13 @@ textarea:not([rows]) {
     --button-text: #3D3D3D;
 
     --light-body-color: #fff;
-    --light-mode-bg-color: #F4F4F4;
+    --light-mode-cnt-color: #F4F4F4;
     --light-mode-box-color: #fff;
     --light-mode-h3-color: #5A537B;
     --light-mode-p-color: #353535;
 
     --dark-body-color: #1C1C1C;
-    --dark-mode-bg-color: #1F2937;
+    --dark-mode-cnt-color: #1F2937;
     --dark-mode-box-color: #273549;
     --dark-mode-h3-color: #CCC1FF;
     --dark-mode-p-color: #FFFFFF;
@@ -135,9 +135,33 @@ textarea:not([rows]) {
     --p-line-height: 1.25rem;
 }
 
+/* ====================== */
+
+/* Mobile Styles */
+
+body {
+    background-color: var(--light-body-color);
+    height: 100svh;
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 34.375rem;
+    background-color: var(--light-mode-cnt-color);
+}
+
+.upper-container {
+    background-color: var(--primary-color);
+}
 
 
 
 @media (prefers-color-scheme: dark) {
-    /* Styles for a dark theme */
+    body {
+        background-color: var(--dark-body-color);
+    }
+
+    .container {
+        background-color: var(--dark-mode-cnt-color);
+    }
 }
