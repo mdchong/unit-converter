@@ -162,7 +162,6 @@ body {
 .upper-container {
     background-color: var(--primary-color);
     padding: 2rem;
-    margin: 2rem 0;
     border-radius: 8px 8px 0 0;
 }
 
@@ -172,7 +171,7 @@ body {
     font-size: var(--h2-font-size);
     line-height: var(--h2-line-height);
     text-align: center;
-    margin: 0;
+    margin: 1.5rem;
     text-wrap: wrap;
 }
 
